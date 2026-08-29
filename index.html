@@ -176,32 +176,32 @@
   .footer-inner{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-family:var(--font-mono);font-size:12px;color:var(--ash-dim);}
 
   /* ================= OPTIMUS CHATBOT ================= */
-  .orionpax-widget{position:fixed;right:22px;bottom:22px;z-index:500;font-family:var(--font-body);}
+  .optimus-widget{position:fixed;right:22px;bottom:22px;z-index:500;font-family:var(--font-body);}
   .bat-icon{width:26px;height:16px;color:#0b0c10;}
   .bat-icon.small{width:20px;height:13px;color:#0b0c10;}
-  .orionpax-toggle{
+  .optimus-toggle{
     width:60px;height:60px;border-radius:50%;background:var(--gold);border:1px solid var(--gold-bright);
     display:flex;align-items:center;justify-content:center;position:relative;
     box-shadow:0 8px 26px rgba(201,162,39,.35);
   }
-  .orionpax-ping{position:absolute;inset:-6px;border-radius:50%;border:1px solid var(--gold-dim);animation:ping 2.4s ease-out infinite;}
+  .optimus-ping{position:absolute;inset:-6px;border-radius:50%;border:1px solid var(--gold-dim);animation:ping 2.4s ease-out infinite;}
   @keyframes ping{0%{transform:scale(.85);opacity:.9;}100%{transform:scale(1.35);opacity:0;}}
-  .orionpax-panel{
+  .optimus-panel{
     position:absolute;right:0;bottom:76px;width:min(370px,88vw);height:min(520px,72vh);
     background:var(--panel);border:1px solid var(--border);border-radius:8px;
     display:flex;flex-direction:column;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.55);
     opacity:0;transform:translateY(14px) scale(.98);pointer-events:none;transition:opacity .22s ease, transform .22s ease;
   }
-  .orionpax-panel.open{opacity:1;transform:translateY(0) scale(1);pointer-events:auto;}
-  .orionpax-header{display:flex;align-items:center;justify-content:space-between;padding:14px 16px;background:var(--steel);border-bottom:1px solid var(--border);}
-  .orionpax-header-left{display:flex;align-items:center;gap:10px;}
-  .orionpax-header-left .bat-icon{background:var(--gold);border-radius:50%;padding:9px;width:20px;height:13px;box-sizing:content-box;}
-  .orionpax-title{font-family:var(--font-mono);font-size:13px;letter-spacing:.1em;color:var(--ink);margin:0;}
-  .orionpax-status{font-family:var(--font-mono);font-size:10.5px;color:var(--ash-dim);margin:2px 0 0;display:flex;align-items:center;gap:5px;}
+  .optimus-panel.open{opacity:1;transform:translateY(0) scale(1);pointer-events:auto;}
+  .optimus-header{display:flex;align-items:center;justify-content:space-between;padding:14px 16px;background:var(--steel);border-bottom:1px solid var(--border);}
+  .optimus-header-left{display:flex;align-items:center;gap:10px;}
+  .optimus-header-left .bat-icon{background:var(--gold);border-radius:50%;padding:9px;width:20px;height:13px;box-sizing:content-box;}
+  .optimus-title{font-family:var(--font-mono);font-size:13px;letter-spacing:.1em;color:var(--ink);margin:0;}
+  .optimus-status{font-family:var(--font-mono);font-size:10.5px;color:var(--ash-dim);margin:2px 0 0;display:flex;align-items:center;gap:5px;}
   .status-dot{width:6px;height:6px;border-radius:50%;background:#4fd67a;box-shadow:0 0 6px #4fd67a;}
-  .orionpax-close{background:none;border:none;color:var(--ash);font-size:20px;line-height:1;padding:4px 8px;}
-  .orionpax-close:hover{color:var(--ink);}
-  .orionpax-messages{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:12px;}
+  .optimus-close{background:none;border:none;color:var(--ash);font-size:20px;line-height:1;padding:4px 8px;}
+  .optimus-close:hover{color:var(--ink);}
+  .optimus-messages{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:12px;}
   .msg{max-width:84%;padding:10px 13px;border-radius:8px;font-size:14px;line-height:1.55;}
   .msg-bot{align-self:flex-start;background:var(--steel);color:var(--ink);border:1px solid var(--border);border-bottom-left-radius:2px;}
   .msg-user{align-self:flex-end;background:var(--gold);color:#0b0c10;border-bottom-right-radius:2px;font-weight:500;}
@@ -210,15 +210,15 @@
   .typing span:nth-child(2){animation-delay:.15s;}
   .typing span:nth-child(3){animation-delay:.3s;}
   @keyframes blink{0%,60%,100%{opacity:.25;}30%{opacity:1;}}
-  .orionpax-suggestions{display:flex;flex-wrap:wrap;gap:6px;padding:0 14px 10px;}
+  .optimus-suggestions{display:flex;flex-wrap:wrap;gap:6px;padding:0 14px 10px;}
   .suggestion-chip{font-family:var(--font-mono);font-size:11px;color:var(--gold-bright);background:rgba(201,162,39,.08);border:1px solid var(--gold-dim);padding:6px 9px;border-radius:12px;}
   .suggestion-chip:hover{background:rgba(201,162,39,.18);}
-  .orionpax-input-row{display:flex;border-top:1px solid var(--border);}
-  .orionpax-input-row input{flex:1;background:var(--panel);border:none;padding:14px;color:var(--ink);font-size:14px;font-family:var(--font-body);}
-  .orionpax-input-row input::placeholder{color:var(--ash-dim);}
-  .orionpax-input-row input:focus{outline:none;}
-  .orionpax-input-row button{background:var(--gold);border:none;color:#0b0c10;width:52px;font-size:16px;}
-  .orionpax-input-row button:hover{background:var(--gold-bright);}
+  .optimus-input-row{display:flex;border-top:1px solid var(--border);}
+  .optimus-input-row input{flex:1;background:var(--panel);border:none;padding:14px;color:var(--ink);font-size:14px;font-family:var(--font-body);}
+  .optimus-input-row input::placeholder{color:var(--ash-dim);}
+  .optimus-input-row input:focus{outline:none;}
+  .optimus-input-row button{background:var(--gold);border:none;color:#0b0c10;width:52px;font-size:16px;}
+  .optimus-input-row button:hover{background:var(--gold-bright);}
 
   /* ================= RESPONSIVE ================= */
   @media (max-width:860px){
@@ -232,7 +232,7 @@
     .hero-cta{flex-direction:column;align-items:stretch;}
     .dossier{padding:22px;}
     .dossier-meta{text-align:left;}
-    .orionpax-panel{right:-14px;width:94vw;}
+    .optimus-panel{right:-14px;width:94vw;}
   }
 
   @media (prefers-reduced-motion:reduce){
@@ -268,7 +268,7 @@
     <p class="hero-tagline" id="heroTagline"></p>
     <div class="hero-cta">
       <a href="#experience" class="btn btn-primary">View Case Log</a>
-      <button class="btn btn-ghost" id="askOrionPaxBtn" type="button">Ask OrionPax</button>
+      <button class="btn btn-ghost" id="askOptimusBtn" type="button">Ask Optimus</button>
       <a href="resume.pdf" class="btn btn-outline" id="resumeBtn" download>Download Résumé</a>
     </div>
   </div>
@@ -338,31 +338,31 @@
 <footer class="footer">
   <div class="container footer-inner">
     <p>&copy; <span id="year"></span> <span id="footerName"></span>. All rights reserved.</p>
-    <p class="footer-note">OrionPax AI assistant available bottom-right for quick questions.</p>
+    <p class="footer-note">Optimus AI assistant available bottom-right for quick questions.</p>
   </div>
 </footer>
 
 <!-- ================= OPTIMUS CHATBOT ================= -->
-<div class="orionpax-widget">
-  <button class="orionpax-toggle" id="orionpaxToggle" aria-label="Open OrionPax chat assistant" type="button">
+<div class="optimus-widget">
+  <button class="optimus-toggle" id="optimusToggle" aria-label="Open Optimus chat assistant" type="button">
     <svg class="bat-icon" viewBox="0 0 100 60" aria-hidden="true"><path fill="currentColor" d="M50,14 L39,1 L41,15 C31,9 16,11 3,23 C15,21 25,23 31,29 C21,31 9,39 5,50 C17,44 29,40 37,40 C35,48 39,56 50,60 C61,56 65,48 63,40 C71,40 83,44 95,50 C91,39 79,31 69,29 C75,23 85,21 97,23 C84,11 69,9 59,15 L61,1 Z"/></svg>
-    <span class="orionpax-ping"></span>
+    <span class="optimus-ping"></span>
   </button>
-  <div class="orionpax-panel" id="orionpaxPanel" aria-hidden="true">
-    <div class="orionpax-header">
-      <div class="orionpax-header-left">
+  <div class="optimus-panel" id="optimusPanel" aria-hidden="true">
+    <div class="optimus-header">
+      <div class="optimus-header-left">
         <svg class="bat-icon small" viewBox="0 0 100 60" aria-hidden="true"><path fill="currentColor" d="M50,14 L39,1 L41,15 C31,9 16,11 3,23 C15,21 25,23 31,29 C21,31 9,39 5,50 C17,44 29,40 37,40 C35,48 39,56 50,60 C61,56 65,48 63,40 C71,40 83,44 95,50 C91,39 79,31 69,29 C75,23 85,21 97,23 C84,11 69,9 59,15 L61,1 Z"/></svg>
         <div>
-          <p class="orionpax-title">OPTIMUS</p>
-          <p class="orionpax-status"><span class="status-dot"></span>Online — ask about Esakkimuthu</p>
+          <p class="optimus-title">OPTIMUS</p>
+          <p class="optimus-status"><span class="status-dot"></span>Online — ask about Esakkimuthu</p>
         </div>
       </div>
-      <button class="orionpax-close" id="orionpaxClose" aria-label="Close chat" type="button">&times;</button>
+      <button class="optimus-close" id="optimusClose" aria-label="Close chat" type="button">&times;</button>
     </div>
-    <div class="orionpax-messages" id="orionpaxMessages"></div>
-    <div class="orionpax-suggestions" id="orionpaxSuggestions"></div>
-    <form class="orionpax-input-row" id="orionpaxForm">
-      <input type="text" id="orionpaxInput" placeholder="Ask OrionPax about Esakkimuthu…" autocomplete="off">
+    <div class="optimus-messages" id="optimusMessages"></div>
+    <div class="optimus-suggestions" id="optimusSuggestions"></div>
+    <form class="optimus-input-row" id="optimusForm">
+      <input type="text" id="optimusInput" placeholder="Ask Optimus about Esakkimuthu…" autocomplete="off">
       <button type="submit" aria-label="Send">➤</button>
     </form>
   </div>
@@ -373,7 +373,7 @@
    EDIT-ME ZONE
    ----------------------------------------------------------------------
    Everything on the page (text, skills, experience, education, badges,
-   contact info) AND every answer OrionPax gives is generated from this
+   contact info) AND every answer Optimus gives is generated from this
    ONE object. To update your site in the future, change values here,
    save the file, and re-upload it (see the deployment guide you were
    given). You never need to touch the HTML, CSS, or the chatbot logic
@@ -631,43 +631,43 @@ function animateCounters(){
 /* ======================================================================
    OPTIMUS — rule-based assistant that only knows RESUME_DATA
    ====================================================================== */
-const orionpaxToggle = document.getElementById('orionpaxToggle');
-const orionpaxPanel = document.getElementById('orionpaxPanel');
-const orionpaxClose = document.getElementById('orionpaxClose');
-const orionpaxMessages = document.getElementById('orionpaxMessages');
-const orionpaxForm = document.getElementById('orionpaxForm');
-const orionpaxInput = document.getElementById('orionpaxInput');
-const orionpaxSuggestions = document.getElementById('orionpaxSuggestions');
-const askOrionPaxBtn = document.getElementById('askOrionPaxBtn');
+const optimusToggle = document.getElementById('optimusToggle');
+const optimusPanel = document.getElementById('optimusPanel');
+const optimusClose = document.getElementById('optimusClose');
+const optimusMessages = document.getElementById('optimusMessages');
+const optimusForm = document.getElementById('optimusForm');
+const optimusInput = document.getElementById('optimusInput');
+const optimusSuggestions = document.getElementById('optimusSuggestions');
+const askOptimusBtn = document.getElementById('askOptimusBtn');
 
-let orionpaxOpened = false;
+let optimusOpened = false;
 
-function openOrionPax(){
-  orionpaxPanel.classList.add('open');
-  orionpaxPanel.setAttribute('aria-hidden','false');
-  if(!orionpaxOpened){
-    orionpaxOpened = true;
-    addMessage('bot', `Hi, I'm OrionPax. I only know about one person on Earth: ${RESUME_DATA.firstName} Venkatesan. Ask me about his experience, skills, education, certifications, or how to reach him.`);
+function openOptimus(){
+  optimusPanel.classList.add('open');
+  optimusPanel.setAttribute('aria-hidden','false');
+  if(!optimusOpened){
+    optimusOpened = true;
+    addMessage('bot', `Hi, I'm Optimus. I only know about one person on Earth: ${RESUME_DATA.firstName} Venkatesan. Ask me about his experience, skills, education, certifications, or how to reach him.`);
     renderSuggestions();
   }
-  setTimeout(() => orionpaxInput.focus(), 250);
+  setTimeout(() => optimusInput.focus(), 250);
 }
-function closeOrionPax(){
-  orionpaxPanel.classList.remove('open');
-  orionpaxPanel.setAttribute('aria-hidden','true');
+function closeOptimus(){
+  optimusPanel.classList.remove('open');
+  optimusPanel.setAttribute('aria-hidden','true');
 }
-orionpaxToggle.addEventListener('click', () => {
-  orionpaxPanel.classList.contains('open') ? closeOrionPax() : openOrionPax();
+optimusToggle.addEventListener('click', () => {
+  optimusPanel.classList.contains('open') ? closeOptimus() : openOptimus();
 });
-orionpaxClose.addEventListener('click', closeOrionPax);
-askOrionPaxBtn.addEventListener('click', openOrionPax);
+optimusClose.addEventListener('click', closeOptimus);
+askOptimusBtn.addEventListener('click', openOptimus);
 
 function addMessage(sender, text){
   const div = document.createElement('div');
   div.className = 'msg ' + (sender === 'user' ? 'msg-user' : 'msg-bot');
   div.textContent = text;
-  orionpaxMessages.appendChild(div);
-  orionpaxMessages.scrollTop = orionpaxMessages.scrollHeight;
+  optimusMessages.appendChild(div);
+  optimusMessages.scrollTop = optimusMessages.scrollHeight;
 }
 
 function renderSuggestions(list){
@@ -678,14 +678,14 @@ function renderSuggestions(list){
     "How can I contact him?"
   ];
   const chips = list || defaults;
-  orionpaxSuggestions.innerHTML = '';
+  optimusSuggestions.innerHTML = '';
   chips.forEach(text => {
     const btn = document.createElement('button');
     btn.type = 'button';
     btn.className = 'suggestion-chip';
     btn.textContent = text;
     btn.addEventListener('click', () => handleUserMessage(text));
-    orionpaxSuggestions.appendChild(btn);
+    optimusSuggestions.appendChild(btn);
   });
 }
 
@@ -694,8 +694,8 @@ function showTyping(){
   div.className = 'typing';
   div.id = 'typingIndicator';
   div.innerHTML = '<span></span><span></span><span></span>';
-  orionpaxMessages.appendChild(div);
-  orionpaxMessages.scrollTop = orionpaxMessages.scrollHeight;
+  optimusMessages.appendChild(div);
+  optimusMessages.scrollTop = optimusMessages.scrollHeight;
 }
 function hideTyping(){
   const t = document.getElementById('typingIndicator');
@@ -706,21 +706,21 @@ function handleUserMessage(text){
   text = text.trim();
   if(!text) return;
   addMessage('user', text);
-  orionpaxInput.value = '';
-  orionpaxSuggestions.innerHTML = '';
+  optimusInput.value = '';
+  optimusSuggestions.innerHTML = '';
   showTyping();
   const delay = 400 + Math.random() * 500;
   setTimeout(() => {
     hideTyping();
-    const { answer, followUps } = getOrionPaxAnswer(text);
+    const { answer, followUps } = getOptimusAnswer(text);
     addMessage('bot', answer);
     if(followUps) renderSuggestions(followUps);
   }, delay);
 }
 
-orionpaxForm.addEventListener('submit', (e) => {
+optimusForm.addEventListener('submit', (e) => {
   e.preventDefault();
-  handleUserMessage(orionpaxInput.value);
+  handleUserMessage(optimusInput.value);
 });
 
 function joinList(arr){
@@ -728,19 +728,19 @@ function joinList(arr){
   return arr.slice(0,-1).join(', ') + ' and ' + arr[arr.length-1];
 }
 
-function getOrionPaxAnswer(raw){
+function getOptimusAnswer(raw){
   const q = raw.toLowerCase();
   const d = RESUME_DATA;
 
   const has = (...words) => words.some(w => q.includes(w));
 
   if(has('hi','hello','hey','greetings')){
-    return { answer: `Hello! I'm OrionPax, ${d.firstName}'s personal assistant. Want to know about his experience, skills, education, or how to get in touch?`,
+    return { answer: `Hello! I'm Optimus, ${d.firstName}'s personal assistant. Want to know about his experience, skills, education, or how to get in touch?`,
       followUps: ["What's his experience?", "What are his skills?", "How can I contact him?"] };
   }
 
-  if(has('who are you','what are you','orionpax')){
-    return { answer: `I'm OrionPax — a focused assistant built into ${d.firstName}'s portfolio. I only answer questions about him: his work, skills, education and how to reach him. I won't chat about anything else.`,
+  if(has('who are you','what are you','optimus')){
+    return { answer: `I'm Optimus — a focused assistant built into ${d.firstName}'s portfolio. I only answer questions about him: his work, skills, education and how to reach him. I won't chat about anything else.`,
       followUps: ["Tell me about him", "What's his experience?"] };
   }
 
