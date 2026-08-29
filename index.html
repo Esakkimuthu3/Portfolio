@@ -732,9 +732,21 @@ function getOptimusAnswer(raw){
   const q = raw.toLowerCase();
   const d = RESUME_DATA;
 
-  const has = (...words) => words.some(w => q.includes(w));
+  // Word-aware matching (not plain substring). Keywords match at the START of a
+  // word, so stems like "skill" still catch "skills" and "certif" still catches
+  // "certifications" — but "hi" no longer matches inside "his"/"him"/"this".
+  // Prefix a keyword with "~" to require a full, exact word match instead of a
+  // stem match (used for short, ambiguous words like the greeting "hi").
+  const has = (...words) => words.some(w => {
+    const exact = w.startsWith('~');
+    const term = (exact ? w.slice(1) : w).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const pattern = exact
+      ? '(^|[^a-z0-9])' + term + '($|[^a-z0-9])'
+      : '(^|[^a-z0-9])' + term;
+    return new RegExp(pattern, 'i').test(' ' + q + ' ');
+  });
 
-  if(has('hi','hello','hey','greetings')){
+  if(has('~hi','hello','hey','greetings')){
     return { answer: `Hello! I'm Optimus, ${d.firstName}'s personal assistant. Want to know about his experience, skills, education, or how to get in touch?`,
       followUps: ["What's his experience?", "What are his skills?", "How can I contact him?"] };
   }
